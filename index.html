@@ -1,316 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <link rel="icon" type="image/svg" href="Rent-A-Unit Favicon.svg">
+  <link rel="icon" type="image/svg" href="Container King Favicon.svg">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta name="description" content="ContainerKing® Limited – UK supplier of portable buildings. Hire Pathfinder® standard units or Squadron® executive offices. Website launching soon." />
-  <meta name="keywords" content="portable buildings, container offices, modular workspaces, executive cabins, containerking, rent-a-unit, UK portable units, bespoke accommodation" />
-  <meta name="author" content="ContainerKing® Limited" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="ContainerKing® / Rent-a-Unit – Portable Buildings" />
-  <meta property="og:description" content="ContainerKing® – Specialists in UK portable buildings. Hire or buy executive offices and workspaces. Website launching soon." />
-  <meta property="og:image" content="https://i.imgur.com/vdVFo5u.png" />
-  <meta property="og:url" content="https://www.rent-a-unit.co.uk" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ContainerKing Limited",
-    "url": "https://www.rent-a-unit.co.uk",
-    "logo": "https://i.imgur.com/vdVFo5u.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+44-1724-870000",
-      "contactType": "Customer Service",
-      "areaServed": "GB",
-      "availableLanguage": "English"
-    }
-  }
-  </script>
-
-  <title>ContainerKing® / Rent-a-Unit – Portable Buildings</title>
+  <meta name="description" content="ContainerKing® Self Storage – Scunthorpe's longest-established and largest privately-owned storage provider offering secure, affordable container storage units for business and personal use." />
+  <meta name="keywords" content="self storage Scunthorpe, container storage Scunthorpe, cheap self storage North Lincolnshire, business storage Scunthorpe, secure self storage units in Scunthorpe, personal storage, car storage Scunthorpe, van storage, tradesman storage Scunthorpe, 20ft container rental, affordable self storage in Scunthorpe, best self storage near me, Scunthorpe storage units, North Lincolnshire self storage, storage near Winterton, storage in Brigg, Scotter container storage" />
+  <title>Self Storage Scunthorpe – Secure, Affordable Container Storage by ContainerKing®</title>
 
   <style>
-    :root {
-      --primary: #45a29e;
-      --primary-dark: #379392;
-      --text: #212529;
-      --heading: #333;
-      --light-bg: rgba(255, 255, 255, 0.75);
-      --spacing-sm: 0.5rem;
-      --spacing-md: 1rem;
-      --spacing-lg: 2rem;
-      --spacing-xl: 3rem;
-      --border-radius: 8px;
+    :root{
+      --primary:#45a29e;--primary-dark:#379392;
+      --text:#212529;--heading:#333;
+      --spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:1.5rem;--spacing-lg:2.5rem;
+      --border-radius:8px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow-x:hidden;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
 
-    html, body {
-      overflow-x: hidden;
-      width: 100%;
+    /* === split === */
+    body{
+      display:flex;
+      height:100vh;
       position: relative;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('bg.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: var(--text);
-      line-height: 1.6;
-      padding: var(--spacing-md);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .page-wrapper {
-      width: 100%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .content-align {
-      width: 95%;
-      max-width: 95%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .container {
-      width: 100%;
-      background: var(--light-bg);
-      border-radius: var(--border-radius);
-      padding: var(--spacing-md) var(--spacing-lg);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-      margin-bottom: var(--spacing-md);
-      font-size: 1rem;
-      text-align: left;
-    }
-
-    .header {
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: var(--spacing-lg);
-      margin-top: var(--spacing-xl);
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      color: var(--heading);
-      margin-top: var(--spacing-lg);
-      margin-bottom: var(--spacing-md);
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: var(--spacing-md);
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-bottom: var(--spacing-md);
-    }
-
-    ul li {
-      margin-bottom: var(--spacing-sm);
-      padding-left: var(--spacing-md);
-      position: relative;
-      font-size: 1rem;
-    }
-
-    ul li::before {
-      content: "\2714\0020";
-      color: #28a745;
-      position: absolute;
+    /* Background image container */
+    .right-side{
+      position: fixed;
+      top: 0;
       left: 0;
-    }
-
-    .logo {
-      max-width: 85%;
-      height: auto;
-    }
-
-    .cta {
-      margin-top: var(--spacing-lg);
-      text-align: center;
       width: 100%;
+      height: 100%;
+      z-index: 1;
     }
-
-    .button {
-      background-color: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: var(--border-radius);
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      text-decoration: none;
-      display: block;
-      margin-bottom: var(--spacing-md);
-      font-weight: 500;
+    .right-side img{
       width: 100%;
-      max-width: 100%;
-      text-align: center;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
-    .button:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-2px);
+    /* Text content container */
+    .left-side{
+      width:33%;
+      min-width:320px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(4px);
+      padding:var(--spacing-lg) 0 0 var(--spacing-lg);
+      display:flex;
+      overflow:visible;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
     }
 
-    .brand {
-      font-weight: bold;
-      color: #000;
-      font-size: 1.2rem;
-      margin-top: var(--spacing-md);
-      display: block;
+    /* === text column === */
+    .page-wrapper{
+      max-width:480px;
+      width:100%;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      padding-right: var(--spacing-lg);
+      overflow-y: auto;
+    }
+    
+    .header{
+      display:flex;
+      justify-content:center;
+      margin-bottom:var(--spacing-sm);
+      flex-shrink: 0;
+    }
+    
+    .logo{width:100%;height:auto}
+
+    .scrollable-content {
+      flex: 1;
+      padding-bottom: var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
     }
 
-    .highlight {
-      background-color: rgba(69, 162, 158, 0.1);
-      padding: var(--spacing-md);
-      border-left: 4px solid var(--primary);
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-      margin: var(--spacing-lg) 0;
+    .content-inner{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
 
-    .highlight p {
-      margin-bottom: 0.5rem;
-    }
+    h1.brand{font-size:1.75rem;color:var(--heading);text-align:center;margin-bottom:var(--spacing-sm)}
+    h2{font-size:1.15rem;color:var(--heading);margin:var(--spacing-md) 0 var(--spacing-xs);text-align:center}
+    h3{font-size:1rem;color:var(--heading);margin:var(--spacing-md) 0 var(--spacing-xs);text-align:center}
+    .contact-info h2{font-size:1.35rem;text-align:center;margin-bottom:var(--spacing-sm)}
 
-    .highlight p:last-child {
-      margin-bottom: 0;
-    }
+    p{font-size:.9rem;line-height:1.4;margin-bottom:var(--spacing-sm);text-align:center}
+    ul{list-style:none;padding-left:0;margin-bottom:var(--spacing-sm)}
+    ul li{padding-left:1.4rem;position:relative;font-size:.9rem;line-height:1.4;margin-bottom:var(--spacing-xs);text-align:left}
+    ul li::before{content:"✔️";position:absolute;left:0}
+    .brand{font-weight:600;font-size:1.1rem;text-align:center}
 
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: white;
-      margin-top: var(--spacing-md);
-      font-weight: bold;
-      width: 100%;
-    }
+    .highlight{background:rgba(69,162,158,.08);border-left:4px solid var(--primary);
+               padding:var(--spacing-sm);border-radius:0 var(--border-radius) var(--border-radius) 0;
+               text-align:center;margin-top:var(--spacing-md)}
 
-    .text-center {
-      text-align: center;
+    /* === buttons equal width === */
+    .cta{text-align:center;margin-top:var(--spacing-md);display:flex;flex-direction:column;gap:var(--spacing-xs);align-items:center}
+    .button{
+      width:220px;
+      background:var(--primary);color:#fff;border:none;
+      padding:.6rem 1.2rem;border-radius:var(--border-radius);
+      font-size:.9rem;cursor:pointer;transition:.2s;
     }
+    .button:hover{background:var(--primary-dark);transform:translateY(-2px)}
 
-    .imgur-embed-pub {
-      display: none;
-    }
+    footer{font-size:.8rem;text-align:center;color:#666;margin-top:var(--spacing-sm);flex-shrink: 0;}
 
-    @media (min-width: 768px) {
-      body {
-        padding: var(--spacing-lg);
+    /* === mobile stack === */
+    @media(max-width:768px){
+      body{flex-direction:column}
+      .left-side{
+        width:100%;
+        height:100%;
+        padding:var(--spacing-lg) var(--spacing-lg) 0 var(--spacing-lg);
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(4px);
       }
-
-      .content-align {
-        width: 85%;
-        max-width: 85%;
+      .right-side{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
       }
-
-      .container {
-        padding: var(--spacing-lg);
-      }
-
-      .header {
-        margin-top: var(--spacing-lg);
-      }
-
-      .logo {
-        max-width: 300px;
-      }
-
-      .button {
-        padding: 12px 20px;
-      }
+      .logo{max-width:260px}
+      .button{width:100%}
+    }
+    
+    /* Hidden SEO content */
+    .seo-content {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
     }
 
-    @media (min-width: 1024px) {
-      .content-align {
-        width: 700px;
-        max-width: 700px;
-      }
-
-      .header {
-        margin-top: var(--spacing-md);
-      }
-
-      .logo {
-        max-width: 450px;
+    /* iPad Safari fix: more transparent and z-index fix */
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      .left-side {
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        backdrop-filter: blur(4px);
+        z-index: 2;
+        position: relative;
       }
     }
   </style>
 </head>
 
 <body>
+  <!-- Hidden SEO content -->
+  <div class="seo-content">
+    <h1>Self Storage Scunthorpe – Secure, Affordable Container Storage by ContainerKing®</h1>
+    <p>Looking for reliable and cost-effective <strong>self storage in Scunthorpe</strong>? ContainerKing® is North Lincolnshire's longest-established and largest privately owned self-storage operator. With over 25 years of experience, we provide <strong>secure container storage units</strong> for both business and personal use across Scunthorpe and surrounding areas.</p>
 
-  <div class="page-wrapper">
-    <div class="content-align">
+    <h2>Trusted Scunthorpe Self Storage for Households, Businesses & Trades</h2>
+    <p>We offer over 300 <strong>storage units in Scunthorpe</strong> across 5 secure local sites, making us the leading choice for flexible, affordable storage. Whether you need short-term storage while moving house, or long-term container space for business equipment, documents, or vehicles — we've got you covered.</p>
+
+    <h3>Low-Cost Self Storage in North Lincolnshire</h3>
+    <ul>
+      <li>Prices from just <strong>£96 per month</strong> (inc. VAT) for a 20ft insulated container</li>
+      <li>5+ acres of open yard space for additional vehicle and trailer storage</li>
+      <li>Convenient access for vans and lorries — ideal for tradespeople and small businesses</li>
+      <li>Scunthorpe's largest indoor facility in planning</li>
+      <li>Fully owned, not franchised – speak directly to local staff</li>
+    </ul>
+
+    <h3>Areas We Serve from Scunthorpe HQ</h3>
+    <p>We provide secure <strong>container self storage</strong> for residents and businesses in Ashby, Winterton, Brigg, Messingham, Scotter, Kirton-in-Lindsey, Gunness, Keadby, Yaddlethorpe, Burton upon Stather, Flixborough, and the Isle of Axholme.</p>
+
+    <h3>Who Uses Our Scunthorpe Self Storage?</h3>
+    <ul>
+      <li><strong>Homeowners and tenants</strong> needing space during moves, renovations, or downsizing</li>
+      <li><strong>Tradespeople and contractors</strong> storing tools, materials, and machinery</li>
+      <li><strong>Retail and e-commerce businesses</strong> needing stock storage</li>
+      <li><strong>Vehicle owners</strong> looking for secure car, van or motorcycle storage</li>
+      <li><strong>Students and seasonal workers</strong> needing temporary local storage</li>
+    </ul>
+
+    <h3>Why Choose ContainerKing® Scunthorpe?</h3>
+    <p>As a local, family-run business, we prioritise customer service, value and security. All units are fully lockable, steel shipping containers, set on well-drained hardstanding with wide access for deliveries. ContainerKing® also offers short and long-term storage contracts to suit every need.</p>
+
+    <h3>Keywords for Google Indexing:</h3>
+    <p>self storage Scunthorpe, container storage Scunthorpe, cheap self storage North Lincolnshire, business storage Scunthorpe, secure self storage units in Scunthorpe, personal storage, car storage Scunthorpe, van storage, tradesman storage Scunthorpe, 20ft container rental, affordable self storage in Scunthorpe, best self storage near me, Scunthorpe storage units, North Lincolnshire self storage, storage near Winterton, storage in Brigg, Scotter container storage</p>
+
+    <p>Need help? Just call Joanne on <strong>01724 870000</strong> — we're ready to help you find the best value <strong>self storage in Scunthorpe</strong>.</p>
+  </div>
+
+  <!-- text -->
+  <div class="left-side">
+    <div class="page-wrapper">
+      <!-- Static header with logo -->
       <div class="header">
-        <img src="Rent-A-Unit.svg" alt="ContainerKing Rent-a-Unit logo - UK portable buildings supplier" class="logo" />
+        <img src="ContainerKing.svg" alt="ContainerKing Self Storage Logo" class="logo">
       </div>
+      
+      <!-- Scrollable content area -->
+      <div class="scrollable-content">
+        <div class="content-inner">
+          <div>
+            <h1 class="brand">Self Storage Scunthorpe – Secure, Affordable Container Storage by ContainerKing®</h1>
+            <p class="brand">Safety in numbers! ContainerKing® Self Storage has more self-storage units in Scunthorpe and from only £96 per month* than any other operator.</p>
+            <p style="font-size:.8rem;color:#000;">*Price for one calendar-month rental inc.&nbsp;VAT of an insulated 20-foot container.</p>
 
-      <div class="container">
-        <p class="text-center"><span class="brand">Portable Buildings. Reimagined.</span></p>
+            <p>Looking for reliable and cost-effective <strong>self storage in Scunthorpe</strong>? ContainerKing® is North Lincolnshire's longest-established and largest privately owned self-storage operator. With over 25 years of experience, we provide <strong>secure container storage units</strong> for both business and personal use across Scunthorpe and surrounding areas.</p>
 
-        <p>With over 25 years of experience, <strong>ContainerKing<sup>&reg;</sup> Limited</strong> is a UK leader in high-quality portable buildings, bespoke accommodation, and container conversions.</p>
-        <p>Through our sub-brand <strong>Rent-a-Unit</strong>, we supply one of the largest fleets of portable buildings for hire and sale across Lincolnshire/Yorkshire & Humberside.</p>
+            <h2>Trusted Scunthorpe Self Storage for Households, Businesses & Trades</h2>
+            <p>We offer over 300 <strong>storage units in Scunthorpe</strong> across 5 secure local sites, making us the leading choice for flexible, affordable storage. Whether you need short-term storage while moving house, or long-term container space for business equipment, documents, or vehicles — we've got you covered.</p>
 
-        <h2>🚛 Ready-to-Go Portable Buildings</h2>
-        <ul>
-          <li><strong>Pathfinder<sup>&reg;</sup></strong> – Standard portable office buildings</li>
-          <li><strong>Squadron<sup>&reg;</sup></strong> – Executive-grade portable workspace units</li>
-        </ul>
-        <p>Available for:</p>
-        <ul>
-          <li>Short, medium, and long-term hire</li>
-          <li>Pre-used unit sales</li>
-          <li>Bespoke accommodation built to order</li>
-        </ul>
+            <h2>🏡 Serving Scunthorpe & Surrounding Areas</h2>
+            <p>We provide secure <strong>container self storage</strong> for residents and businesses in Ashby, Winterton, Brigg, Messingham, Scotter, Kirton-in-Lindsey, Gunness, Keadby, Yaddlethorpe, Burton upon Stather, Flixborough, and the Isle of Axholme.</p>
 
-        <div class="highlight">
-          <p>⚡ <strong>Exciting New Product Information Coming Soon</strong></p>
-          <p>We're working on something exciting behind the scenes. In the meantime, we're here and ready to help with all your portable building needs.</p>
+            <h3>Low-Cost Self Storage in North Lincolnshire</h3>
+            <ul>
+              <li>Prices from just <strong>£96 per month</strong> (inc. VAT) for a 20ft insulated container</li>
+              <li>5+ acres of open yard space for additional vehicle and trailer storage</li>
+              <li>Convenient access for vans and lorries — ideal for tradespeople and small businesses</li>
+              <li>Scunthorpe's largest indoor facility in planning</li>
+              <li>Fully owned, not franchised – speak directly to local staff</li>
+            </ul>
+
+            <h3>Who Uses Our Scunthorpe Self Storage?</h3>
+            <ul>
+              <li><strong>Homeowners and tenants</strong> needing space during moves, renovations, or downsizing</li>
+              <li><strong>Tradespeople and contractors</strong> storing tools, materials, and machinery</li>
+              <li><strong>Retail and e-commerce businesses</strong> needing stock storage</li>
+              <li><strong>Vehicle owners</strong> looking for secure car, van or motorcycle storage</li>
+              <li><strong>Students and seasonal workers</strong> needing temporary local storage</li>
+            </ul>
+
+            <h3>Why Choose ContainerKing® Scunthorpe?</h3>
+            <p>As a local, family-run business, we prioritise customer service, value and security. All units are fully lockable, steel shipping containers, set on well-drained hardstanding with wide access for deliveries. ContainerKing® also offers short and long-term storage contracts to suit every need.</p>
+
+            <div class="highlight">ContainerKing® delivers cost-effective space for movers, business stock, archives, travellers and vehicles. Need help? Just call Joanne on <strong>01724 870000</strong> — we're ready to help you find the best value <strong>self storage in Scunthorpe</strong>.</div>
+          </div>
+
+          <div>
+            <div class="contact-info"><h2>📞 Need help? Just Ask: <strong>Joanne</strong></h2></div>
+
+            <div class="cta">
+              <a href="tel:01724870000" class="button">Call&nbsp;01724&nbsp;870000</a>
+              <a href="https://www.containerking.co.uk/self-storage" class="button">Visit&nbsp;Website</a>
+            </div>
+          </div>
         </div>
 
-        <div class="cta">
-          <a href="tel:01724870000" class="button">Call us: 01724 870000</a>
-          <a href="mailto:sales@rent-a-unit.co.uk" class="button">Email us: sales@rent-a-unit.co.uk</a>
-          <a href="http://www.rent-a-unit.co.uk" class="button" target="_blank" rel="noopener">Visit our website</a>
-        </div>
+        <footer>&copy; 2025 ContainerKing® Limited. All rights reserved.</footer>
       </div>
     </div>
-
-    <footer>
-      &copy; 2025 ContainerKing® Limited. All rights reserved.
-    </footer>
   </div>
-</body>
 
+  <!-- image -->
+  <div class="right-side"><img src="bg.jpeg" alt="ContainerKing Storage Facility in Scunthorpe - Secure Container Storage"></div>
+</body>
 </html>
